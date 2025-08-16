@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\lib\fullcalendar-6.1.10\**" />
+    <Content Remove="wwwroot\lib\fullcalendar-6.1.10\**" />
+    <EmbeddedResource Remove="wwwroot\lib\fullcalendar-6.1.10\**" />
+    <None Remove="wwwroot\lib\fullcalendar-6.1.10\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\DeviceLoaction\Location_Criteria.cshtml" />
+    <None Include="wwwroot\AppJS\DeviceLoaction\Location_Criteria.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Pages\Configuration\TaxSlab.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\AppJS\Admin\UploadModule.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\AppJS\Configuration\EmployeeType.js">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+</Project>
